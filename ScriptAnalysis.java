@@ -4,6 +4,7 @@ import java.io.*;
 public class ScriptAnalysis {
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner input = new Scanner(new File("bojackpilot.txt"));
+		List<String> characters = Arrays.asList("BOJACK", "DIANE", "MR. PEANUTBUTTER", "CAROLYN", "TODD");
 		Map<String, Map<String, Integer>> characterWords = new HashMap<String, Map<String, Integer>>();
 		while (input.hasNextLine()) {
 			String line = input.nextLine();
@@ -27,22 +28,28 @@ public class ScriptAnalysis {
 					dialogue += " " + line;
 				}
 			}
-			String[] words = dialogue.replaceAll("\\p{Punct}", "").toLowerCase().split("\\s+");
-			if (!characterWords.containsKey(character)) {
-				characterWords.put(character, new TreeMap<String, Integer>());
-			}
+			if (characters.contains(character)) {
+				String[] words = dialogue.replaceAll("\\p{Punct}", "").toLowerCase().split("\\s+");
+				if (!characterWords.containsKey(character)) {
+					characterWords.put(character, new TreeMap<String, Integer>());
+				}
 
-			for (String word : words) {
-				if (word.length() > 0) {
-					Map<String, Integer> thisCharWords = characterWords.get(character);
-					if (thisCharWords.get(word) == null) {
-						thisCharWords.put(word, 1);
-					} else {
-						thisCharWords.put(word, thisCharWords.get(word) + 1);
+				for (String word : words) {
+					if (word.length() > 0) {
+						Map<String, Integer> thisCharWords = characterWords.get(character);
+						if (thisCharWords.get(word) == null) {
+							thisCharWords.put(word, 1);
+						} else {
+							thisCharWords.put(word, thisCharWords.get(word) + 1);
+						}
 					}
 				}
 			}
 		}
-		System.out.println(characterWords);
+		PrintStream output = new PrintStream(new File("pilotEpisodeMapped.txt"));
+		output.println(characterWords);
+        /*for (Map.Entry<String, <String, Integer>> character : characterWords.entrySet()) {
+            output.println("\"" + character.getKey() + "\" : \"" + character.getValue() + "\",");
+        }*/
 	}
 }
