@@ -8,6 +8,7 @@
 	  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	  <script src="overlay.js"></script>
 	</head>
 	<body>
 		<h1>The Science of BoJack Horseman</h1>
@@ -18,12 +19,42 @@
 		<br/>
 		<br/>
 		<div id="character-set">
-			<img src="img/bojack.png" onmouseover="this.src='img/bojack_outline.png'" onmouseout="this.src='img/bojack.png'">
-			<img src="img/carolyn.png" onmouseover="this.src='img/carolyn_outline.png'" onmouseout="this.src='img/carolyn.png'">
-			<img src="img/diane.png" onmouseover="this.src='img/diane_outline.png'" onmouseout="this.src='img/diane.png'">
-			<img src="img/mr peanutbutter.png" onmouseover="this.src='img/mr peanutbutter_outline.png'" onmouseout="this.src='img/mr peanutbutter.png'">
-			<img src="img/todd.png" onmouseover="this.src='img/todd_outline.png'" onmouseout="this.src='img/todd.png'">
+			<img id="bojack-img" src="img/bojack.png" onmouseover="this.src='img/bojack_outline.png'" onmouseout="this.src='img/bojack.png'">
+			<img id="carolyn-img" src="img/carolyn.png" onmouseover="this.src='img/carolyn_outline.png'" onmouseout="this.src='img/carolyn.png'">
+			<img id="diane-img" src="img/diane.png" onmouseover="this.src='img/diane_outline.png'" onmouseout="this.src='img/diane.png'">
+			<img id="mr-peanutbutter-img" src="img/mr peanutbutter.png" onmouseover="this.src='img/mr peanutbutter_outline.png'" onmouseout="this.src='img/mr peanutbutter.png'">
+			<img id="todd-img" src="img/todd.png" onmouseover="this.src='img/todd_outline.png'" onmouseout="this.src='img/todd.png'">
 		</div>
 		<h3>The 5 main characters</h3>
+		
+		<div id="bojack-overlay" class="overlay">
+			<div id="bojack-overlay-content" class="overlay-content">
+				<img src="img/bojack.png">
+			</div>
+		</div>	
+
+		<div id="carolyn-overlay" class="overlay">
+			<div id="carolyn-overlay-content" class="overlay-content">
+				<img src="img/carolyn.png">
+			</div>
+		</div>	
+
+		<div id="diane-overlay" class="overlay">
+			<div id="diane-overlay-content" class="overlay-content">
+				<img src="img/diane.png">
+			</div>
+		</div>	
+
+		<div id="mr-peanutbutter-overlay" class="overlay">
+			<div id="mr-peanutbutter-overlay-content" class="overlay-content">
+				<img src="img/mr peanutbutter.png">
+			</div>
+		</div>	
+
+		<div id="todd-overlay" class="overlay">
+			<div id="todd-overlay-content" class="overlay-content">
+				<img src="img/todd.png">
+			</div>
+		</div>	
 	</body>
 </html>

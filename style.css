@@ -39,3 +39,41 @@ img {
 	padding-left: 15%;
 	padding-right: 10%;
 }
+
+.overlay {  
+    width: 100%;
+  	top: 0;
+  	height: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    background-color: rgb(173,97,49); /* Black fallback color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#carolyn-overlay {
+	background-color: rgb(255, 136, 227);
+}
+
+#diane-overlay {
+	background-color: rgb(87, 124, 40);
+}
+
+#mr-peanutbutter-overlay {
+	background-color: rgb(254, 221, 0);
+}
+
+#todd-overlay {
+	background-color: rgb(234, 0, 36);
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    left: 15%;
+    /*text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
