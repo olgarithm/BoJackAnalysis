@@ -1,6 +1,6 @@
 html {
 	font-family: "Patrick Hand SC";
-	color: white;
+	color: black;
 }
 
 h1 {
@@ -13,8 +13,13 @@ h2 {
 	padding-left: 30px;
 }
 
+h3 {
+	text-align: center;
+	font-size: 17pt;
+}
+
 body {
-	background-color: #FFA500;
+	background-color: #FFFFFF;
 	
 }
 
