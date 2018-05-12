@@ -15,6 +15,10 @@
 		$("diane-img").onclick = openDiane;
 		$("mr-peanutbutter-img").onclick = openMrPB;
 		$("todd-img").onclick = openTodd;
+		var allBackBtns = qsa(".back");
+		for (var i = 0; i < allBackBtns.length; i++) {
+			allBackBtns[i].onclick = closeNav;
+		}
   	};
 
   	/* Open */
