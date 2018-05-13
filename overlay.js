@@ -10,40 +10,24 @@
 	function qs(sel) { return document.querySelector(sel); }
    
 	window.onload = function() {
-		$("bojack-img").onclick = openNav;
-		$("carolyn-img").onclick = openCarolyn;
-		$("diane-img").onclick = openDiane;
-		$("mr-peanutbutter-img").onclick = openMrPB;
-		$("todd-img").onclick = openTodd;
+		$("bojack").onclick = showOverlay;
+		$("carolyn").onclick = showOverlay;
+		$("diane").onclick = showOverlay;
+		$("mr-peanutbutter").onclick = showOverlay;
+		$("todd").onclick = showOverlay;
 		var allBackBtns = qsa(".back");
 		for (var i = 0; i < allBackBtns.length; i++) {
-			allBackBtns[i].onclick = closeNav;
+			allBackBtns[i].onclick = closeOverlay;
 		}
   	};
 
-  	/* Open */
-	function openNav() {
-	    document.getElementById("bojack-overlay").style.height = "100%";
+  	// Slides the character's overlay down
+  	function showOverlay() {
+	    document.getElementById(this.id+"-overlay").style.height = "100%";
 	}
 
-	function openCarolyn() {
-	    document.getElementById("carolyn-overlay").style.height = "100%";
-	}
-
-	function openDiane() {
-	    document.getElementById("diane-overlay").style.height = "100%";
-	}
-
-	function openMrPB() {
-	    document.getElementById("mr-peanutbutter-overlay").style.height = "100%";
-	}
-
-	function openTodd() {
-		document.getElementById("todd-overlay").style.height = "100%";
-	}
-
-	/* Close */
-	function closeNav() {
-	    document.getElementById("bojack-overlay").style.height = "0";
+	// Slides the character's overlay back up
+	function closeOverlay() {
+	    this.parentNode.parentNode.style.height = "0";
 	}
 })();
