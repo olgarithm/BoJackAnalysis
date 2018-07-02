@@ -10,7 +10,7 @@ h1 {
 
 h2 {
 	font-size: 20pt;
-	padding-left: 30px;
+	padding-left: 10%;
 }
 
 h3 {
@@ -26,8 +26,8 @@ body {
 p {
 	font-family: "Lato";
 	font-size: 12pt;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 img {
@@ -36,8 +36,8 @@ img {
 }
 
 #character-set {
-	padding-left: 15%;
-	padding-right: 10%;
+	margin: 0 auto;
+    width: 60%; 
 }
 
 .overlay {  
