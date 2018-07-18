@@ -46,10 +46,27 @@ public class ScriptAnalysis {
 				}
 			}
 		}
-		PrintStream output = new PrintStream(new File("pilotEpisodeMapped.txt"));
-		output.println(characterWords);
+		PrintStream output = new PrintStream(new File("pilotEpisodeMappedTry2.txt"));
+		output.println(sortByValues(characterWords));
         /*for (Map.Entry<String, <String, Integer>> character : characterWords.entrySet()) {
             output.println("\"" + character.getKey() + "\" : \"" + character.getValue() + "\",");
         }*/
 	}
+
+	public static <K, V extends Comparable<V>> Map<K, V> sortByValues(Map<K, V> map) {
+    	Comparator<K> valueComparator = new Comparator<K>() {
+			public int compare(K key, K key2) {
+				int compareKeys = map.get(key2).compareTo(map.get(key));
+				if (compareKeys == 0) {
+					return 1;
+				} else {
+					return compareKeys;
+				}
+			}
+		};
+		Map<K, V> sortedByValues = new TreeMap<K, V>(valueComparator);
+		sortedByValues.putAll(map);
+		return sortedByValues;
+    }
+
 }
