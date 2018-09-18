@@ -2,69 +2,290 @@
 	<head>
 	  <meta charset="utf-8">
 	  <title>Analyzing BoJack Horseman</title>
-	  <link rel="stylesheet" href="style.css">
 	  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC">
 	  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="style.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	  <script src="overlay.js"></script>
 	</head>
 	<body>
-		<h1>The Science of BoJack Horseman</h1>
+			<h1>The Science of BoJack Horseman</h1>
+		<div id="content">
 		<h2>Who and What is BoJack Horseman?</h2>
 		<p>One of the most underrated TV shows on Netflix is BoJack Horseman. A common deterrent for people is the fact that it's an adult cartoon. But, just as "Bob's Burgers" has shown, not all adult cartoons are cringey, racist, or otherwise problematic (but I digress...) The show features a washed up TV actor, BoJack, who struggles to find and mantain happiness due to his cynical worldview. Other characters include his assertive agent, Princess Carolyn, his nerdy ghostwriter Diane, his enthusiastic fellow actor, Mr. Peanutbutter, and his stoner roommate, Todd. What makes this show interesting is how these different characters interact. One would expect these distinct personalities to be completely incompatible, but the show's witty script creates a natural flow.</p>
+		<br/>
 		<h2>Alright... Enough Horsin' Around... Let's Get to Business!</h2>
 		<p>There are countless iconic characters in BoJack Horseman (Sextina Aquafina, A Ryan Seacrest Type, Officer Meow Meow Fuzzyface, Vincent Adultman, Character Actress Margo Martindale... need I go on?) However, we need to be realistic about data collection so that we can analyze characters who actually have character arcs. So, the five characters we will be examining are BoJack, Princess Carolyn, Diane, Mr. Peanutbutter, and Todd. Click on one of them to get started!</p>
 		<br/>
-		<br/>
 		<div id="character-set">
-			<img id="bojack" src="img/bojack.png" onmouseover="this.src='img/bojack_outline.png'" onmouseout="this.src='img/bojack.png'">
-			<img id="carolyn" src="img/carolyn.png" onmouseover="this.src='img/carolyn_outline.png'" onmouseout="this.src='img/carolyn.png'">
-			<img id="diane" src="img/diane.png" onmouseover="this.src='img/diane_outline.png'" onmouseout="this.src='img/diane.png'">
-			<img id="mr-peanutbutter" src="img/mr peanutbutter.png" onmouseover="this.src='img/mr peanutbutter_outline.png'" onmouseout="this.src='img/mr peanutbutter.png'">
-			<img id="todd" src="img/todd.png" onmouseover="this.src='img/todd_outline.png'" onmouseout="this.src='img/todd.png'">
+			<img id="bojack" src="img/bojack_outline.png" onmouseover="this.src='img/bojack.png'" onmouseout="this.src='img/bojack_outline.png'">
+			<img id="carolyn" src="img/carolyn_outline.png" onmouseover="this.src='img/carolyn.png'" onmouseout="this.src='img/carolyn_outline.png'">
+			<img id="diane" src="img/diane_outline.png" onmouseover="this.src='img/diane.png'" onmouseout="this.src='img/diane_outline.png'">
+			<img id="mr-peanutbutter" src="img/mr peanutbutter_outline.png" onmouseover="this.src='img/mr peanutbutter.png'" onmouseout="this.src='img/mr peanutbutter_outline.png'">
+			<img id="todd" src="img/todd_outline.png" onmouseover="this.src='img/todd.png'" onmouseout="this.src='img/todd_outline.png'">
 		</div>
 		<h3>The 5 main characters</h3>
 		
 		<div id="bojack-overlay" class="overlay">
 			<div id="bojack-overlay-content" class="overlay-content">
-				<img src="img/bojack.png">
-				<br/>
-				<button class="back">Back Home</button>
+				<div class="row">
+					<div class="column">
+						<div class="left">
+						<img src="img/bojack_outline.png">
+						<div class="word-count">
+							<br/>
+							<span class="subtitle"> Word Count </span>
+							<br/>
+							Throughout the four seasons, BoJack spoke 
+							<br/>
+							<span class="big-text">45,743 words</span>
+							<br/>
+							This is the most of all the main characters.
+							<br/>
+							<br/>
+							<span class="subtitle">Character Interaction</span>
+							<br/>
+							How many times he says each character's name:
+							<ul>
+								<li>BoJack: 126</li>
+								<li>Todd: 118</li>
+								<li>Diane: 70</li>
+								<li>Mr. Peanutbutter: 37</li>
+								<li>Princess Carolyn: 29</li>
+							</ul>
+							He is the only character to say his own name the most times.
+						</div>
+					</div>
+					<br/>
+						<button type="button" class="back btn btn-outline-light">Back Home</button>
+					</div>
+					<div class="right">
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"I"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"you"</p>
+						</div>
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"the"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"a"</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>	
-
 		<div id="carolyn-overlay" class="overlay">
 			<div id="carolyn-overlay-content" class="overlay-content">
-				<img src="img/carolyn.png">
-				<br/>
-				<button class="back">Back Home</button>
+				<div class="row">
+					<div class="column">
+						<div class="left">
+							<img src="img/carolyn_outline.png">
+							<div class="word-count">
+								<br/>
+								<span class="subtitle"> Word Count </span>
+								<br/>
+								Throughout the four seasons, Princess Carolyn spoke 
+								<br/>
+								<span class="big-text">16,087 words</span>
+								<br/>
+								<span class="subtitle">Character Interaction</span>
+								<br/>
+								How many times she says each character's name:
+								<ul>
+									<li>BoJack: 76</li>
+									<li>Todd: 23</li>
+									<li>Diane: 19</li>
+									<li>Princess Carolyn: 19</li>
+									<li>Mr. Peanutbutter: 11</li>
+								</ul>
+							</div>
+						</div>
+						<br/>
+						<button type="button" class="back btn btn-outline-light">Back Home</button>
+					</div>
+					<div class="right">
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"I"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"you"</p>
+						</div>
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"the"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"a"</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>	
-
+		</div>
 		<div id="diane-overlay" class="overlay">
 			<div id="diane-overlay-content" class="overlay-content">
-				<img src="img/diane.png">
-				<br/>
-				<button class="back">Back Home</button>
+				<div class="row">
+					<div class="column">
+						<div class="left">
+							<img src="img/diane_outline.png">
+							<div class="word-count">
+								<br/>
+								<span class="subtitle"> Word Count </span>
+								<br/>
+								Throughout the four seasons, Diane spoke 
+								<br/>
+								<span class="big-text">15,790 words</span>
+								<br/>
+								<span class="subtitle">Character Interaction</span>
+								<br/>
+								How many times she says each character's name:
+								<ul>
+									<li>BoJack: 68</li>
+									<li>Mr. Peanutbutter: 41</li>
+									<li>Diane: 31</li>
+									<li>Todd: 17</li>
+									<li>Princess Carolyn: 5</li>
+								</ul>
+							</div>
+						</div>
+						<br/>
+						<button type="button" class="back btn btn-outline-light">Back Home</button>
+					</div>
+					<div class="right">
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"I"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"you"</p>
+						</div>
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"the"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"a"</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>	
-
+		</div>
 		<div id="mr-peanutbutter-overlay" class="overlay">
 			<div id="mr-peanutbutter-overlay-content" class="overlay-content">
-				<img src="img/mr peanutbutter.png">
-				<br/>
-				<button class="back">Back Home</button>
-			</div>
+				<div class="row">
+					<div class="column">
+						<div class="left">
+							<img src="img/mr peanutbutter_outline.png">
+							<div class="word-count">
+								<br/>
+								<span class="subtitle"> Word Count </span>
+								<br/>
+								Throughout the four seasons, Mr. Peanutbutter spoke 
+								<br/>
+								<span class="big-text">16,034 words</span>
+								<br/>
+								<span class="subtitle">Character Interaction</span>
+								<br/>
+								How many times he says each character's name:
+								<ul>
+									<li>Diane: 74</li>
+									<li>BoJack: 64</li>
+									<li>Todd: 37</li>
+									<li>Mr. Peanutbutter: 33</li>
+									<li>Princess Carolyn: 8</li>
+								</ul>
+								He is the only character to not say BoJack's name the most.
+							</div>
+						</div>
+						<br/>
+						<button type="button" class="back btn btn-outline-light">Back Home</button>
+					</div>
+					<div class="right">
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"I"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"you"</p>
+						</div>
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"the"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"a"</p>
+						</div>
+					</div>
+				</div>
 		</div>	
-
 		<div id="todd-overlay" class="overlay">
 			<div id="todd-overlay-content" class="overlay-content">
-				<img src="img/todd.png">
-				<br/>
-				<button class="back">Back Home</button>
+				<div class="row">
+					<div class="column">
+						<div class="left">
+							<img src="img/todd_outline.png">
+							<div class="word-count">
+								<br/>
+								<span class="subtitle"> Word Count </span>
+								<br/>
+								Throughout the four seasons, Todd spoke 
+								<br/>
+								<span class="big-text">14,362 words</span>
+								<br/>
+								This is the least of all the main characters.
+								<br/>
+								<br/>
+								<span class="subtitle">Character Interaction</span>
+								<br/>
+								How many times he says each character's name:
+								<ul>
+									<li>BoJack: 60</li>
+									<li>Todd: 33</li>
+									<li>Mr. Peanutbutter: 31</li>
+									<li>Princess Carolyn: 19</li>
+									<li>Diane: 15</li>
+								</ul>
+							</div>
+						</div>
+						<br/>
+						<button type="button" class="back btn btn-outline-light">Back Home</button>
+					</div>
+					<div class="right">
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"I"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"you"</p>
+						</div>
+						<div class="quote-container">
+						<img src="quote_bubble.svg" alt="quote bubble">
+						<p class="first">"the"</p>
+						</div>
+						<div class="quote-container-flip">
+						<img src="quote_bubble_flip.svg" alt="quote bubble">
+						<p class="first">"a"</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>	
+		</div>
+	</div>
 	</body>
 </html>

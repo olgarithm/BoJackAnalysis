@@ -1,11 +1,20 @@
-html {
+body {
 	font-family: "Patrick Hand SC";
+	color: black;
+	background: url("background2.png") repeat-x;
+	background-size: 100% 100%;
+}
+
+.word-count {
 	color: black;
 }
 
 h1 {
 	text-align: center;
-	font-size: 30pt;
+	font-size: 45pt;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	color: black;
 }
 
 h2 {
@@ -18,14 +27,9 @@ h3 {
 	font-size: 17pt;
 }
 
-body {
-	background-color: #FFFFFF;
-	
-}
-
 p {
 	font-family: "Lato";
-	font-size: 12pt;
+	font-size: 14pt;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -70,8 +74,63 @@ img {
 
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
     width: 100%; 
-    left: 15%;
-    margin-top: 30px;
+    left: 10%;
+    margin-top: 50px;
+}
+
+.quote-container {
+    position: relative;
+    text-align: center;
+    color: black;
+    height: 200px;
+    width: 274px;
+    margin-bottom: -70px;
+    margin-left: -30px;
+}
+
+.quote-container-flip {
+    position: relative;
+    text-align: center;
+    color: black;
+    height: 200px;
+    width: 274px;
+    margin-bottom: -70px;
+    margin-right: 30px;
+}
+
+.first {
+    position: absolute;
+    top: 75px;
+    left: 65px;
+}
+
+.row {
+    display: flex;
+}
+
+.btn-outline-light {
+	font-size: 20px;
+	margin-left: 5%;
+}
+
+.left {
+	background-color: white;
+	color: black;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.right {
+	padding-left: 20%;
+	flex: 50%;
+}
+
+.subtitle {
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+.big-text {
+	font-size: 54px;
 }

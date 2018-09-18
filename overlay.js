@@ -28,6 +28,6 @@
 
 	// Slides the character's overlay back up
 	function closeOverlay() {
-	    this.parentNode.parentNode.style.height = "0";
+	    this.parentNode.parentNode.parentNode.parentNode.style.height = "0";
 	}
 })();
